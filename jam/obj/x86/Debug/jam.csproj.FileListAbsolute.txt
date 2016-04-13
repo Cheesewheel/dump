@@ -1,0 +1,4 @@
+D:\Documenten\GitHub\dump\jam\bin\Debug\jam.exe
+D:\Documenten\GitHub\dump\jam\bin\Debug\jam.pdb
+D:\Documenten\GitHub\dump\jam\obj\x86\Debug\jam.exe
+D:\Documenten\GitHub\dump\jam\obj\x86\Debug\jam.pdb

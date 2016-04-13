@@ -6,9 +6,10 @@ namespace jam
 	{
 		public static void Main (string[] args)
 		{
-			System.IO.StreamReader file = new System.IO.StreamReader(@"/home/koen/Downloads/input.in");
+			/* System.IO.StreamReader file = new System.IO.StreamReader(@"/home/koen/Downloads/input.in"); */
+            System.IO.StreamReader file = new System.IO.StreamReader(@"D:\Documenten\GitHub\dump\input.in");
 
-			int length, cases, i = 0, i2 = 0, i3 = 0, i4 = 0;
+			int length, cases, i = 0, i2 = 0, i3 = 0;
 			char c;
 			string trans = "test", trans2;
 			string[] english =    new string[26] {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
@@ -32,33 +33,34 @@ namespace jam
 			while (i < cases) {
 				length = input [i].Length;
 				trans = input [i];
-				i3 = 0;
+				i2 = 0;
 
-				while (i3 < length) {
-					i4 = 0;
-					c = trans [i3];
+				while (i2 < length) {
+					i3 = 0;
+					c = trans [i2];
 					trans2 = c.ToString ();
+                    /*Console.ReadLine();*/
 
-					while (i4 < 26) {
+					while (i3 < 26) {
 					
-						if (trans2.Contains (googlerese [i4])) {
-							trans = trans.Remove (i3, 1).Insert (i3, english [i4]);
+						if (trans2.Contains (googlerese [i3])) {
+							trans = trans.Remove (i2, 1).Insert (i2, english [i3]);
 						}
 
-						i4++;
+						i3++;
+				    }
 
-					i3++;
+                    i2++;
 				}
 
-				input [i] = "Case #" + (i + 1) + ": " + trans;
-				Console.WriteLine (input[i]);
-				i++;
-				i2++;
-				}
+                input[i] = "Case #" + (i + 1) + ": " + trans;
+                i++;
 			}
 
-			System.IO.File.WriteAllLines(@"/home/koen/Documenten/C#/dump/jam/output.txt", input);
-
+			/* System.IO.File.WriteAllLines(@"/home/koen/Documenten/C#/dump/jam/output.txt", input); */
+            System.IO.File.WriteAllLines(@"D:\Documenten\GitHub\dump\output.txt", input);
+            Console.WriteLine("Done");
+            Console.ReadLine();
 		}
 	}
 }
